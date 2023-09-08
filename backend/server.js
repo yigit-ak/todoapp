@@ -6,9 +6,25 @@ const tasks = require('./routes/tasks');
 
 // middleware
 app.use(express.json());
+app.use((req, res, next) => {
+    // Allow requests from any origin
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    
+    // Set the allowed HTTP methods
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    
+    // Set the allowed headers
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    
+    // Allow credentials (e.g., cookies)
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+    
+    // Continue to the next middleware
+    next();
+});
 
 // routes
-app.use('/', tasks)
+app.use('/api/v1/tasks', tasks)
 
 const port = process.env.PORT || 5000;
 
