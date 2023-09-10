@@ -1,7 +1,7 @@
 import http from "../http-common";
 
 class TaksDataService {
-    async getAll() {
+    getAll() {
         return http.get("/");
     }
 

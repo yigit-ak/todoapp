@@ -25,6 +25,8 @@ export default function TaskContainer() {
             { taskList.map( task => { return (
                 <Task task={task} key={task._id}/>)
                 })}
+            
+            < TaskAdder />
         </div>
     );
 }
