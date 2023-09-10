@@ -23,9 +23,31 @@ body {
 
     /* PADDING & MARGIN */
     padding: 5px;
-    margin: 10px 10px;
+    margin: 10px 0;
 }
 
 .task-title {
     margin-left: 5px;
+}
+
+.task-adder > input {
+    /* LAYOUT */
+    display: block;
+    padding: 5px;
+    margin: 10px 0;
+    width: 100%;
+
+    /* COLOUR */
+    background-color: hsl(225, 10%, 10%);
+    color: inherit;
+
+   /* BORDER */
+    border: solid;
+    border-radius: 7px;
+    border-width: 1px;
+    border-color: hsl(0, 0%, 55%) !important;
+
+    /* FONT */
+    font-family: inherit;
+    font-size: inherit;
 }

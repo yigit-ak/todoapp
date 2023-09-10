@@ -1,7 +1,7 @@
 import Task from './Task';
 import TaskAdder from './TaskAdder';
-import TaskDataService from '../services/task'
-import {useState, useEffect} from 'react'
+import TaskDataService from '../services/task';
+import {useState, useEffect} from 'react';
 
 export default function TaskContainer() {
 
@@ -9,7 +9,7 @@ export default function TaskContainer() {
 
     useEffect( () => {
         fetchTasks();
-    }, []);
+    }, [taskList]);
 
     const fetchTasks = async () => {
         try {
@@ -22,11 +22,11 @@ export default function TaskContainer() {
 
     return (
         <div className="task-container">
+            < TaskAdder updateTaskList={fetchTasks}/>
+            
             { taskList.map( task => { return (
                 <Task task={task} key={task._id}/>)
                 })}
-            
-            < TaskAdder />
         </div>
     );
 }
