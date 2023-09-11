@@ -11,7 +11,7 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     
     // Set the allowed HTTP methods
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE');
     
     // Set the allowed headers
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
