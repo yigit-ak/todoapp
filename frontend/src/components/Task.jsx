@@ -3,12 +3,23 @@ import TaskDataService from '../services/task';
 export default function Task(props) {
     const {task} = props;
 
-    const deleteTask = () => {
-        TaskDataService.delete(props.task._id);
+    const deleteTask = async () => {
+        try {
+            await TaskDataService.delete(props.task._id);
+            props.updateTaskList();
+        } catch (error) {
+            console.log(error.message);
+        }
     }
 
-    const toggleTask = () => {
-        TaskDataService.update(props.task._id, {"completed": String(!props.task.completed)}); // ATTENTION! true/false should be a String
+    const toggleTask = async () => {
+        try {
+            await TaskDataService.update(props.task._id, {"completed": String(!props.task.completed)}); // ATTENTION! true/false should be a String
+            await props.updateTaskList();
+            await props.updateCompletedTasks();
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     const deleteTaskButton = <svg className="delete-task-button" viewBox="0 0 48 48" onClick={deleteTask}>

@@ -1,7 +1,16 @@
 const Task = require('../models/Task');
 
 const getAllTasks = async (req, res) => {
-    const tasks = await Task.find();
+    const {completed} = req.query;
+    const queryObject = {};
+
+    if(completed) {
+        queryObject.completed = completed === "true" ? true : false;
+    }
+
+    let result = Task.find(queryObject);
+    const tasks = await result;
+
     if (!tasks)
         return res.status(404).json({success: false, message: "no tasks found"});
     res.status(200).json({success: true, data: tasks});

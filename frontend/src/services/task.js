@@ -1,8 +1,8 @@
 import http from "../http-common";
 
 class TaksDataService {
-    getAll() {
-        return http.get("/");
+    getAll(query) {
+        return http.get(`/?${query}`);
     }
 
     get(taskId) {
