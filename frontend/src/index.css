@@ -1,85 +1,85 @@
 body {
-    /* COLOUR */
-    background-color: hsl(0, 0%, 10%);
-    color: hsl(0, 0%, 90%);
+  /* COLOUR */
+  background-color: hsl(0, 0%, 10%);
+  color: hsl(0, 0%, 90%);
 
-    /* LAYOUT */
-    width: 50%;
-    margin:auto;
+  /* LAYOUT */
+  width: 50%;
+  margin: auto;
 
-    /* FONTS */
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 20px;
+  /* FONTS */
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
 }
 
 .task {
-    background-color: hsl(225, 10%, 10%);
+  background-color: hsl(225, 10%, 10%);
 
-    /* BORDER */
-    border: solid;
-    border-radius: 7px;
-    border-width: 1px;
-    border-color: hsl(0, 0%, 55%) !important;
+  /* BORDER */
+  border: solid;
+  border-radius: 7px;
+  border-width: 1px;
+  border-color: hsl(0, 0%, 55%) !important;
 
-    /* LAYOUT */
-    position: relative;
-    padding: 5px;
-    margin: 10px 0;
+  /* LAYOUT */
+  position: relative;
+  padding: 5px;
+  margin: 10px 0;
 }
 
 .task-title {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .task-adder > input {
-    /* LAYOUT */
-    display: block;
-    padding: 5px;
-    margin: 10px 0;
-    width: 100%;
+  /* LAYOUT */
+  display: block;
+  padding: 5px;
+  margin: 10px 0;
+  width: 100%;
 
-    /* COLOUR */
-    background-color: hsl(225, 10%, 10%);
-    color: inherit;
+  /* COLOUR */
+  background-color: hsl(225, 10%, 10%);
+  color: inherit;
 
-   /* BORDER */
-    border: solid;
-    border-radius: 7px;
-    border-width: 1px;
-    border-color: hsl(0, 0%, 55%) !important;
+  /* BORDER */
+  border: solid;
+  border-radius: 7px;
+  border-width: 1px;
+  border-color: hsl(0, 0%, 55%) !important;
 
-    /* FONT */
-    font-family: inherit;
-    font-size: inherit;
+  /* FONT */
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .delete-task-button {
-    /* LAYOUT */
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
-    right: 7px;
+  /* LAYOUT */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: 7px;
 
-    /* BORDER */
-    border: solid;
-    border-radius: 15px;
-    border-width: 3px;
+  /* BORDER */
+  border: solid;
+  border-radius: 15px;
+  border-width: 3px;
 
-    /* COLOUR */
-    color: hsla(0, 42%, 60%, .3);
-    fill: hsla(0, 42%, 60%, .3);
-    stroke: hsla(0, 42%, 60%, .3);
+  /* COLOUR */
+  color: hsla(0, 42%, 60%, 0.3);
+  fill: hsla(0, 42%, 60%, 0.3);
+  stroke: hsla(0, 42%, 60%, 0.3);
 
-    stroke-width: 3px;
+  stroke-width: 3px;
 
-    width: 12px;
-    height: 12px;
+  width: 12px;
+  height: 12px;
 }
 
 .delete-task-button:hover {
-    /* COLOUR */
-    color: hsl(0, 42%, 60%);
-    fill: hsl(0, 42%, 60%);
-    stroke: hsl(0, 42%, 60%);
+  /* COLOUR */
+  color: hsl(0, 42%, 60%);
+  fill: hsl(0, 42%, 60%);
+  stroke: hsl(0, 42%, 60%);
 }
