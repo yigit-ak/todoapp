@@ -32,13 +32,15 @@ export default function TaskAdder(props) {
   };
 
   return (
-    <div className="task-adder">
-      <input
-        type="text"
-        placeholder="Enter a task..."
-        onKeyDown={addTask}
-        onChange={handleInputChange}
-      />
+    <div
+      className="task-adder"
+      type="text"
+      placeholder="Enter a task..."
+      onKeyDown={addTask}
+      onClick={handleInputChange}
+    >
+      <div className="checkbox">+</div>
+      <div className="task-title">Add New Task</div>
     </div>
   );
 }

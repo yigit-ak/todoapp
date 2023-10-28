@@ -11,15 +11,13 @@ const TaskSchema = new mongoose.Schema({
     default: Date.now(),
     immutable: true,
   },
-  details: {
+  description: {
     type: String,
-    default: "",
   },
   updatedAt: {
     type: Date,
     default: Date.now(),
   },
-  deadline: Date,
 });
 
 module.exports = mongoose.model("Task", TaskSchema);

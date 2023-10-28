@@ -24,21 +24,27 @@ export default function Task(props) {
     }
   };
 
-  const deleteTaskButton = (
-    <svg
-      className="delete-task-button"
-      viewBox="0 0 48 48"
-      onClick={deleteTask}
-    >
-      <path d="M 39.486328 6.9785156 A 1.50015 1.50015 0 0 0 38.439453 7.4394531 L 24 21.878906 L 9.5605469 7.4394531 A 1.50015 1.50015 0 0 0 8.484375 6.984375 A 1.50015 1.50015 0 0 0 7.4394531 9.5605469 L 21.878906 24 L 7.4394531 38.439453 A 1.50015 1.50015 0 1 0 9.5605469 40.560547 L 24 26.121094 L 38.439453 40.560547 A 1.50015 1.50015 0 1 0 40.560547 38.439453 L 26.121094 24 L 40.560547 9.5605469 A 1.50015 1.50015 0 0 0 39.486328 6.9785156 z"></path>
-    </svg>
-  );
-
   return (
-    <div className="task">
-      <input type="checkbox" checked={task.completed} onChange={toggleTask} />
+    <div className={task.completed ? "completed-task" : "task"}>
+      <div className="checkbox" onClick={toggleTask}>
+        {task.completed ? (
+          <svg
+            width="18"
+            height="15"
+            viewBox="0 0 15 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.447297 6.10404L2.79957 3.75176L5.48423 6.38529L11.774 0.121082L14.1263 2.47336L5.48423 11.0643L0.447297 6.10404Z"
+              fill="#1A1A1A"
+            />
+          </svg>
+        ) : (
+          ""
+        )}
+      </div>
       <span className="task-title">{task.title}</span>
-      {deleteTaskButton}
     </div>
   );
 }

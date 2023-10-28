@@ -2,7 +2,6 @@ import Task from "./Task";
 import TaskAdder from "./TaskAdder";
 import TaskDataService from "../services/task";
 import { useState, useEffect } from "react";
-import CompletedTasks from "./CompletedTasks";
 
 export default function TaskContainer() {
   const [taskList, setTaskList] = useState([]);
@@ -14,7 +13,7 @@ export default function TaskContainer() {
 
   const fetchTasks = async () => {
     try {
-      const response = await TaskDataService.getAll("completed=false");
+      const response = await TaskDataService.getAll();
 
       setTaskList(response.data.data);
     } catch (err) {
@@ -33,8 +32,6 @@ export default function TaskContainer() {
 
   return (
     <div className="task-container">
-      <TaskAdder updateTaskList={fetchTasks} />
-
       {taskList.map((task) => {
         return (
           <Task
@@ -45,12 +42,7 @@ export default function TaskContainer() {
           />
         );
       })}
-
-      <CompletedTasks
-        updateTaskList={fetchTasks}
-        completedTasks={completedTasks}
-        fetchCompletedTasks={fetchCompletedTasks}
-      />
+      <TaskAdder />
     </div>
   );
 }

@@ -1,85 +1,88 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
 body {
-  /* COLOUR */
-  background-color: hsl(0, 0%, 10%);
-  color: hsl(0, 0%, 90%);
+  /* COLOR */
+  background-color: #1a1a1a;
+  color: #d9d9d9;
 
   /* LAYOUT */
-  width: 50%;
   margin: auto;
 
   /* FONTS */
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 20px;
+  font-family: "Montserrat", "Nunito Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  word-wrap: break-word;
+}
+
+.task-container {
+  width: 30%;
+  margin: auto;
+}
+
+.task,
+.completed-task,
+.task-adder {
+  /* LAYOUT */
+  width: 100%;
+  display: flex;
+  margin: 15px 0;
+  align-items: center;
+  border-radius: 15px;
 }
 
 .task {
-  background-color: hsl(225, 10%, 10%);
+  background-color: #d9d9d9;
+  color: #1a1a1a;
+}
 
-  /* BORDER */
-  border: solid;
-  border-radius: 7px;
-  border-width: 1px;
-  border-color: hsl(0, 0%, 55%) !important;
-
-  /* LAYOUT */
-  position: relative;
-  padding: 5px;
-  margin: 10px 0;
+.completed-task {
+  background: #808080;
 }
 
 .task-title {
-  margin-left: 5px;
+  margin: 7px;
 }
 
-.task-adder > input {
-  /* LAYOUT */
-  display: block;
-  padding: 5px;
-  margin: 10px 0;
-  width: 100%;
-
-  /* COLOUR */
-  background-color: hsl(225, 10%, 10%);
-  color: inherit;
-
-  /* BORDER */
-  border: solid;
-  border-radius: 7px;
-  border-width: 1px;
-  border-color: hsl(0, 0%, 55%) !important;
-
-  /* FONT */
-  font-family: inherit;
-  font-size: inherit;
+.completed-task > .task-title {
+  color: #4c4c4c;
+  text-decoration-line: line-through;
 }
 
-.delete-task-button {
-  /* LAYOUT */
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
-  right: 7px;
-
-  /* BORDER */
-  border: solid;
-  border-radius: 15px;
-  border-width: 3px;
-
-  /* COLOUR */
-  color: hsla(0, 42%, 60%, 0.3);
-  fill: hsla(0, 42%, 60%, 0.3);
-  stroke: hsla(0, 42%, 60%, 0.3);
-
-  stroke-width: 3px;
-
-  width: 12px;
-  height: 12px;
+.checkbox {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  background-color: #60809f;
+  border-radius: 6px;
+  display: inline-flex;
+  position: relative;
+  margin-left: 9px;
+  align-items: center;
 }
 
-.delete-task-button:hover {
-  /* COLOUR */
-  color: hsl(0, 42%, 60%);
-  fill: hsl(0, 42%, 60%);
-  stroke: hsl(0, 42%, 60%);
+.completed-task > .checkbox {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #3d4d5d;
+  color: #1a1a1a;
+}
+
+.task-adder {
+  background: #7db2e8;
+  color: #08192b;
+}
+
+.task-adder > .checkbox {
+  background: #08192b;
+  color: #d9d9d9;
+  align-items: center;
+  justify-content: center;
 }
