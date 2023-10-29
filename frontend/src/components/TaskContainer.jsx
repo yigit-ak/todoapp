@@ -42,7 +42,7 @@ export default function TaskContainer() {
           />
         );
       })}
-      <TaskAdder />
+      <TaskAdder updateTaskList={fetchTasks} />
     </div>
   );
 }

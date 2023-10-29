@@ -67,6 +67,7 @@ body {
   position: relative;
   margin-left: 9px;
   align-items: center;
+  cursor: pointer;
 }
 
 .completed-task > .checkbox {
@@ -78,6 +79,7 @@ body {
 .task-adder {
   background: #7db2e8;
   color: #08192b;
+  cursor: pointer;
 }
 
 .task-adder > .checkbox {
@@ -85,4 +87,19 @@ body {
   color: #d9d9d9;
   align-items: center;
   justify-content: center;
+}
+
+.new-task > input[type="text"] {
+  font: inherit;
+  color: inherit;
+  background-color: inherit;
+  border: inherit;
+  width: 100%;
+  white-space-collapse: preserve;
+  text-wrap: wrap;
+  overflow-wrap: break-word;
+}
+
+.new-task > input[type="text"]:focus-visible {
+  outline: none;
 }
